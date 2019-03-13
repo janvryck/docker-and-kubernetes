@@ -13,3 +13,10 @@ Mount your local filesystem to your Docker container in order to live reload you
 ```shell
 docker run -v ${pwd}:/app [image name] 
 ```
+
+The `${pwd}` instruction runs the pwd-command in bash as a shorthand for the present working directory.
+
+Exclude a container folder from being overwritten by adding it with an additional `-v`-flag command line argument.
+```shell
+docker run -v /app/node_modules -v ${pwd}:/app [image name] 
+```
