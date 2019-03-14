@@ -3,6 +3,7 @@ services:
   - docker
 
 before_install:
+  - cd section-6_Production-workflow\frontend
   - docker build -t jvanryck/docker-react -f Dockerfile.dev .
 
 script:
